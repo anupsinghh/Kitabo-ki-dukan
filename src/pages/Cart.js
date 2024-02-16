@@ -1,10 +1,13 @@
-// Cart.js
-
 import React from 'react';
 import './Cart.css';
+import qrCodeImage from '../components/p.png';
 
 const Cart = ({ cartItems, removeFromCart, proceedToPayment }) => {
   const totalCartValue = cartItems.reduce((total, item) => total + item.price, 0);
+
+  // UPI ID and QR code information
+  const upiId = 'yourupi@example.com';
+  const qrCodeSrc = 'path/to/your/qr-code.png';
 
   return (
     <div className="cart-container">
@@ -31,9 +34,15 @@ const Cart = ({ cartItems, removeFromCart, proceedToPayment }) => {
         <div className="total-card">
           <div className="total-card-header">Total Cart Value</div>
           <div className="total-card-value">₹{totalCartValue}</div>
-          <button onClick={proceedToPayment} className="proceed-button">
-            Proceed to Payment
-          </button>
+          <div className="payment-info">
+            <div className="payment-info">
+              <div className="upi-id">UPI ID: '8003843246@kotak'</div>
+              <img src={qrCodeImage} alt="UPI QR Code" className="qr-code" />
+            </div>
+            <button onClick={proceedToPayment} className="proceed-button">
+              Proceed to Payment
+            </button>
+          </div>
         </div>
       </div>
     </div>

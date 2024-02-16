@@ -1,3 +1,5 @@
+/* Default styles for larger screens */
+
 .name {
   display: flex;
   align-items: center;
@@ -27,7 +29,7 @@
 }
 
 .book-card {
-  width: calc(16.666% - 20px); /* Adjust width based on 6 books in a row with margins */
+  width: calc(16.666% - 20px);
   margin-bottom: 10px;
   text-align: center;
   border: 0px solid #4a4e69;
@@ -41,13 +43,12 @@
 
 .book-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .book-image {
   max-width: 100%;
-  height: 300px; /* Adjusted height for smaller size */
+  height: 300px;
   margin-bottom: 0px;
   align-self: center;
   border-radius: 0px;
@@ -55,7 +56,7 @@
 }
 
 .book-title {
-  font-size: 14px; /* Adjusted font size for smaller size */
+  font-size: 14px;
   margin-bottom: 5px;
 }
 
@@ -70,7 +71,7 @@
 }
 
 .button-container {
-  margin-top: auto; /* Push the button to the bottom of the card */
+  margin-top: auto;
 }
 
 .book-card button {
@@ -88,7 +89,6 @@
   background-color: #ffd700;
   color: #000;
 }
-
 
 .footer {
   background-color: #333;
@@ -110,7 +110,7 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   text-align: center;
-  margin-bottom: 20px; /* Add margin-bottom to create space between about us and footer */
+  margin-bottom: 20px;
 }
 
 .about-us-section h2 {
@@ -144,18 +144,64 @@
   height: 100%;
   object-fit: cover;
 }
-/* styles.css or your existing stylesheet */
 
 .anup-singh {
   color: #ffc300;
-  
 }
 
-
-
 .profile-link:hover .anup-singh {
-  text-decoration: underline ; /* or any other style you prefer on hover */
+  text-decoration: underline;
   cursor: pointer;
   color: #ffc300;
+}
+
+/* Default styles for larger screens */
+
+/* Your existing styles... */
+
+/* Media queries for responsive design */
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+  .background-image {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .book-card {
+    width: calc(33.333% - 20px);
+  }
+
+  .book-image {
+    height: 200px;
+  }
+}
+
+/* For smaller phones */
+@media (max-width: 480px) {
+  .background-image {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .book-card {
+    width: calc(50% - 20px);
+  }
+
+  .book-image {
+    height: 150px;
+  }
+
+  /* Adjustments for header visibility */
+  .header {
+    display: block;
+  }
+}
+
+/* Additional style for small screens */
+.header {
+  display: none;
 }
 

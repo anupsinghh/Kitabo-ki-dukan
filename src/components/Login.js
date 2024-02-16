@@ -1,14 +1,21 @@
-// Login.js
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
 import './Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  // Get the navigate function
+  const navigate = useNavigate();
+
   const handleLogin = () => {
     console.log('Login clicked. Username:', username, 'Password:', password);
+
+    // Perform your login logic here
+
+    // Assuming login is successful, redirect to the homepage
+    navigate('/');
   };
 
   return (

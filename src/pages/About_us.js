@@ -13,11 +13,7 @@ const AboutUs = () => {
         Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h2>
         
       </p>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-        <img src="lib-1.jpg" alt="lib" style={{ width: '30%', borderRadius: '8px', marginBottom: '10px' }} />
-        <img src="lib-2.jpg" alt="lib" style={{ width: '30%', borderRadius: '8px', marginBottom: '10px' }} />
-        <img src="lib-1.jpg" alt="lib" style={{ width: '30%', borderRadius: '8px', marginBottom: '10px' }} />
-      </div>
+       
     </div>
   );
 };
