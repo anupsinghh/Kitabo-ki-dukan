@@ -30,10 +30,10 @@
   width: calc(16.666% - 20px); /* Adjust width based on 6 books in a row with margins */
   margin-bottom: 10px;
   text-align: center;
-  border: 2px solid #4a4e69;
+  border: 0px solid #4a4e69;
   padding: 5px;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 0px;
   margin: auto;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
@@ -41,6 +41,8 @@
 
 .book-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+
 }
 
 .book-image {
@@ -48,7 +50,7 @@
   height: 300px; /* Adjusted height for smaller size */
   margin-bottom: 0px;
   align-self: center;
-  border-radius: 15px;
+  border-radius: 0px;
   overflow: hidden;
 }
 
@@ -61,6 +63,33 @@
   color: rgb(0, 0, 0);
 }
 
+.book-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+.book-card button {
+  width: 100%;
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-card button:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+
+
 .footer {
   background-color: #333;
   color: white;
@@ -71,7 +100,9 @@
 .footer p {
   margin: 0;
   font-size: 14px;
+  color: #ddd;
 }
+
 .about-us-section {
   margin-top: 20px;
   padding: 20px;
@@ -79,6 +110,7 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   text-align: center;
+  margin-bottom: 20px; /* Add margin-bottom to create space between about us and footer */
 }
 
 .about-us-section h2 {
@@ -89,17 +121,41 @@
 .about-us-paragraph {
   font-size: 18px;
   color: #555;
-  line-height: 1.5; /* Adjust line height for better readability */
+  line-height: 1.5;
 }
+
 .about-us-images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
-  width: 33%;
-  height: 300px;
+}
+
+.about-us-image {
+  width: calc(33.333% - 10px);
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* styles.css or your existing stylesheet */
+
+.anup-singh {
+  color: #ffc300;
   
 }
 
 
 
+.profile-link:hover .anup-singh {
+  text-decoration: underline ; /* or any other style you prefer on hover */
+  cursor: pointer;
+  color: #ffc300;
+}
 

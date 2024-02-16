@@ -1,6 +1,7 @@
+// Login.js
 
 import React, { useState } from 'react';
-import './Login.css'; 
+import './Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -31,7 +32,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="button" onClick={handleLogin}>
+        <button type="button" onClick={handleLogin} className="login-button">
           Login
         </button>
       </form>
