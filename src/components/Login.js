@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // Get the navigate function
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -21,7 +20,7 @@ const Login = () => {
   return (
     <div>
       <form>
-        <div>
+        <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -30,7 +29,7 @@ const Login = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"

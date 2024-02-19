@@ -12,7 +12,7 @@ const Cart = ({ cartItems, removeFromCart, proceedToPayment }) => {
   return (
     <div className="cart-container">
       <div className="left-side">
-        <h2 className="cart-title">Cart</h2>
+        <h2 className="cart-title"style={{ paddingTop: '40px' }}>Cart</h2>
         <ul className="cart-list">
           {cartItems.map((item, index) => (
             <li key={index} className="cart-item">
@@ -37,7 +37,7 @@ const Cart = ({ cartItems, removeFromCart, proceedToPayment }) => {
           <div className="payment-info">
             <div className="payment-info">
               <div className="upi-id">UPI ID: '8003843246@kotak'</div>
-              <img src={qrCodeImage} alt="UPI QR Code" className="qr-code" />
+              {/* <img src={qrCodeImage} alt="UPI QR Code" className="qr-code" /> */}
             </div>
             <button onClick={proceedToPayment} className="proceed-button">
               Proceed to Payment

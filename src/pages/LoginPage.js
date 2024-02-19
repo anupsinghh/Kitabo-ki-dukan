@@ -6,7 +6,7 @@ import Login from '../components/Login';
 
 const LoginPage = () => {
   return (
-    <div style={{ paddingTop: '10px' }}>
+    <div style={{ paddingTop: '40px' }}>
       <h1>Login Page</h1>
       <Login />
       <p>

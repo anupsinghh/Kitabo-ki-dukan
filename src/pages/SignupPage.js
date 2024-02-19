@@ -22,7 +22,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="signup-container" style={{ paddingTop: '20px' }}>
+    <div className="signup-container" style={{ paddingTop: '50px' }}>
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <label>

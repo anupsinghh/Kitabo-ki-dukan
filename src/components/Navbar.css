@@ -1,76 +1,80 @@
 /* Base styles */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    
-    padding: 10px 20px;
-    background-color: #480ca8;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10; /* Ensure navbar stays on top */
+  display: flex;
+  align-items: end;
+  justify-content: stretch;
+  padding: 10px 20px;
+  background-color: #480ca8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a,
+.nav-search input,
+.nav-search button {
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.nav-search button {
+  cursor: pointer;
+  background-color: rgb(240, 246, 66);
+}
+
+.nav-search input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+/* New styles for responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start;
   }
-  
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-  }
-  
+
   .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #480ca8;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .nav-links.active {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
   }
-  
-  .nav-links li {
-    margin-right: 20px;
+
+  .menu-button {
+    display: block;
   }
-  
-  .nav-links a,
-  .nav-search input,
-  .nav-search button {
-    text-decoration: none;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-  }
-  
-  .nav-search button {
-    cursor: pointer;
-    background-color: rgb(240, 246, 66);
-  }
-  
-  .nav-search input {
-    flex-grow: 1;
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #480ca8;
-      width: 100%;
-      z-index: 9;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .menu-button {
-      display: block;
-    }
-  }
-  
+
   .open .nav-links {
     display: flex;
     flex-direction: column;
@@ -81,8 +85,22 @@
     width: 100%;
     z-index: 9;
   }
-  
+
   .open .nav-search {
     display: none;
   }
-  
+
+  .nav-search {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .nav-search button {
+    margin-left: 0; /* Adjusted margin */
+  }
+
+  .nav-search input {
+    width: 80%;
+    margin-right: 0; /* Adjusted margin */
+  }
+}

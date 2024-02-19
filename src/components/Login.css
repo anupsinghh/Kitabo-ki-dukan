@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 110vh;
   margin: 0;
 }
 
@@ -19,8 +19,6 @@ body {
   justify-content: space-between;
 }
 
-/* Rest of your existing CSS for .logo, .nav-links, .nav-search, etc. */
-
 .content {
   margin-top: 60px; /* Adjust as needed based on your navbar height */
 }
@@ -31,8 +29,10 @@ body {
   align-items: center;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding-top: 0px;
-  padding-right: 30%;
+  background-color: #480ca8; /* Blue background color */
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
 }
 
 /* Login.css */
@@ -41,13 +41,13 @@ form {
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  margin: 50px;
+  margin-top: 20px; /* Adjust as needed */
 }
 
 label {
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 5px;
-  display: block;
+  color: #1a1818; /* White text color for labels */
 }
 
 input {
